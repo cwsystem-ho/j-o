@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J&O Higienização</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans text-gray-800">
+
+  <!-- HEADER -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-700">J&O Higienização</h1>
+
+      <!-- Botão Hamburguer (mobile) -->
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-4">
+        <a href="#servicos" class="hover:text-blue-600">Serviços</a>
+        <a href="#antes-depois" class="hover:text-blue-600">Antes e Depois</a>
+        <a href="#sobre" class="hover:text-blue-600">Sobre</a>
+        <a href="#contato" class="hover:text-blue-600">Contato</a>
+      </nav>
+    </div>
+
+    <!-- Menu Mobile -->
+    <nav id="mobile-menu" class="hidden flex-col bg-white shadow-md md:hidden">
+      <a href="#servicos" class="p-3 border-b hover:bg-gray-100">Serviços</a>
+      <a href="#antes-depois" class="p-3 border-b hover:bg-gray-100">Antes e Depois</a>
+      <a href="#sobre" class="p-3 border-b hover:bg-gray-100">Sobre</a>
+      <a href="#contato" class="p-3 hover:bg-gray-100">Contato</a>
+    </nav>
+  </header>
+
+  <script>
+    // Script para abrir/fechar menu mobile
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+
+  <!-- HERO -->
+  <section class="bg-blue-100 pt-24 pb-16 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">Invista no bem-estar da sua família!</h2>
+      <p class="text-lg mb-6">Higienização profissional de sofás, estofados e muito mais.</p>
+      <a href="https://wa.me/5599999999999" target="_blank"
+        class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+        Solicite seu Orçamento no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-8">Nossos Serviços</h3>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">
+          <h4 class="font-semibold mb-2">Higienização de Sofás</h4>
+          <p class="text-sm">Limpeza profunda que remove sujeiras, manchas e ácaros.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">
+          <h4 class="font-semibold mb-2">Impermeabilização</h4>
+          <p class="text-sm">Proteja seus estofados contra líquidos e manchas.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">
+          <h4 class="font-semibold mb-2">Limpeza de Colchões</h4>
+          <p class="text-sm">Elimine fungos, ácaros e garanta noites mais saudáveis.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">
+          <h4 class="font-semibold mb-2">Bancos Automotivos</h4>
+          <p class="text-sm">Seu carro sempre limpo e livre de odores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES E DEPOIS -->
+  <section id="antes-depois" class="py-16 bg-blue-50">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-10">Resultados de Nossa Higienização</h3>
+      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+        <!-- CARD ANTES -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-red-600 text-white py-2 font-semibold">Antes</div>
+          <img src="antes.png" alt="Antes da limpeza" class="w-full object-cover">
+        </div>
+
+        <!-- CARD DEPOIS -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-green-600 text-white py-2 font-semibold">Depois</div>
+          <img src="depois.png" alt="Depois da limpeza" class="w-full object-cover">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Sobre a J&O Higienização</h3>
+      <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+        A J&O é especializada nos serviços de limpeza, higienização e impermeabilização de estofados, sofás e bancos de
+        carro.
+        Trabalhamos com técnicas modernas e produtos de alta qualidade para oferecer conforto e saúde para sua família.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-16 bg-blue-100 text-center">
+    <h3 class="text-2xl font-bold mb-4">Entre em Contato</h3>
+    <p class="mb-6">Peça seu orçamento de forma prática. Basta clicar no botão abaixo!</p>
+    <a href="https://wa.me/5599999999999" target="_blank"
+      class="bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition">
+      Fale Conosco no WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>© 2025 J&O Higienização - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+
+</html>
